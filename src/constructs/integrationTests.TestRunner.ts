@@ -14,7 +14,6 @@ const runTests = async (properties: unknown) => {
 
     // @ts-ignore
     const result = await exec();
-    console.info(inspect(result));
 
     if (process.exitCode) {
       throw new Error(`Tests Failed`);
