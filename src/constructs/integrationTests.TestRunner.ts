@@ -28,7 +28,6 @@ export const handler = CfnLambda({
     await runTests(properties);
 
     return {
-      PhysicalResourceId: '',
       FnGetAttrsDataObj: {
         TestPassed: true,
         Finished: new Date().toISOString(),
@@ -39,7 +38,6 @@ export const handler = CfnLambda({
     console.info('Update', inspect({physicalId, properties, oldProperties}));
     await runTests(properties);
     return {
-      PhysicalResourceId: '',
       FnGetAttrsDataObj: {
         TestPassed: true,
         Finished: new Date().toISOString(),
@@ -50,7 +48,6 @@ export const handler = CfnLambda({
     console.info('Delete', inspect({physicalId, properties}));
 
     return {
-      PhysicalResourceId: '',
       FnGetAttrsDataObj: {},
     };
   },

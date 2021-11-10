@@ -8,6 +8,10 @@ export class TestStack extends cdk.Stack {
     
     new IntegrationTests(this, `IntegrationTests`, {
       testEntry: require.resolve("./tests"),
+      timeout: cdk.Duration.seconds(5),
+      properties: {
+        DynamoTableName: "TestValue"
+      }
     });
   }
 }

@@ -1,7 +1,7 @@
 declare module "cfn-lambda" {
 
     interface Result<Attributes> {
-        PhysicalResourceId: string;
+        PhysicalResourceId?: string;
         FnGetAttrsDataObj: Attributes;
     }
 
